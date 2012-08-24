@@ -1,0 +1,13 @@
+<h2>Create View</h2>
+
+<% product = Product.new(params[:product]) %>
+<%= product.save %>
+
+<% if product.save %>
+  <h2>New Product INITIATED</h2>
+  Your product looks like <%= product.inspect%>
+<% else %>
+  <h2>Your product was REJECTED</h2>
+  <%= product.errors.full_messages %>
+  Fix it fool.
+<% end %>

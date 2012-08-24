@@ -1,8 +1,8 @@
 ControllerExercise::Application.routes.draw do
 
-
+  get '/products/new' => 'products#new'
   get '/products' => 'products#index'
-
+  post '/products' => 'products#create'
   resources :users
 
   # The priority is based upon order of creation:
